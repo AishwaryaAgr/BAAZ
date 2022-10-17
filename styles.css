@@ -4,7 +4,7 @@
 }
 .page{
     height: 100%;
-    width: 100%;
+    width: 100vw !important;
     background-color: rgb(0, 0, 0);
 }
 
@@ -13,12 +13,12 @@
 #ContainerPage1{
     height: 100%;
     width: 100%;
-    background: url(./Assets/BaazJourney_Compressed.mp4);
+    /* background: url(./Assets/BaazJourney_Compressed.mp4);   */
     background-repeat: no-repeat;
     background-size: cover;
-    background: linear-gradient(rgba(0, 0, 0, 0.123), rgba(0, 0, 0,1)), url(./Assets/BaazJourney_Compressed.mp4);
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgb(0, 0, 0)), url(./Assets/BaazJourney_Compressed.mp4) !important;
     /* opacity: 0.5; */
-    background-blend-mode: overlay;
+    /* background-blend-mode: overlay; */
 }
 
 #logo_p1{
@@ -34,8 +34,10 @@
     padding-left: 5vw;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-}
-
+    /* transform: translateY(10%); */
+  }
+  
+  /* transition: 1s ease-in; */
 #line1_p1{
     font-size: 3.5rem;
 
@@ -845,7 +847,34 @@ body {
   scroll-snap-type: y mandatory;
 }
 
-.scrollContainer .page{
-  scroll-snap-align: start;
-  transition: 0.5s ease-in-out;
+.scrollContainerpage{
+  scroll-snap-align: center ;
+  /* opacity: 0; */
+  /* transition: 0.5s ease-in-out; */
+}
+
+.intro {
+  height: 100vh;
+}
+
+.stage{
+  opacity: 1;
+}
+
+.intro video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.intro h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: white;
+}
+::-webkit-scrollbar {
+	display: none;
 }
