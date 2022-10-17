@@ -25,6 +25,15 @@
     <link rel="stylesheet" type="text/css" href="Assets/owl.carousel.min.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
 
+<style>
+    ::-webkit-scrollbar {
+  width: 0 !important;
+	display: none !important;
+  visibility: hidden !important;
+  z-index: -1;
+}
+</style>    
+
 </head>
 
 <body>
@@ -32,136 +41,227 @@
     <div class="parent">
 
         <div id="ContainerPage1" class="page">
-            <div>
+            <div class="navbar blur">
+                <!-- <a href=""></a> -->
                 <img id="logo_p1" src="./Assets/Baaz_Logo_White_Orange.png" alt="">
+                <div class="sideButtons">
+                    <div class="sideButton"><a class="nav-lnk" href="#IntroVideo">Solution</a></div>
+                    <div class="sideButton"><a class="nav-lnk" href="#ContainerPage3">Eco System</a></div>
+                    <div class="sideButton"><a class="nav-lnk" href="#ContainerPage5">Journey</a></div>
+                    <div class="sideButton"><a class="nav-lnk" href="#ContainerPage4">Media</a></div>
+                    <div class="sideButton"><a class="nav-lnk" href="#ContainerPage6">Impact</a></div>
+                </div>
             </div>
             <div id="text_p1">
-                <div id="line1_p1">Electrifying Deliveries</div>
+                <div id="line1_p1">ELECTRIFYING DELIVERIES</div>
                 <div id="line2_p1">Mobility Ecosystem for Delivery Workers</div>
                 <!-- <button id="button_p1" class="button">Know More</button> -->
 
             </div>
         </div>
         <div id="ContainerPage2" class="page">
-            <div class="intro">
-                <h1>The New Dev Ed Pro</h1>
+            <div class="intro" id="IntroVideo">
+                <h1 class="newDev"></h1>
                 <video src="Assets/Apple-Dev Ed Pro.mp4"></video>
             </div>
             <section class="scrollContainer">
-                <div id="ContainerPage3" class="page">
+                <div id="ContainerPage3" class="page scrollContainerpage">
                     <div id="tab_p3" class="tabs">
                         <input type="radio" id="tab1" name="tab-control" class="heading_tabs" checked>
                         <input type="radio" id="tab2" name="tab-control" class="heading_tabs">
                         <input type="radio" id="tab3" name="tab-control" class="heading_tabs">
                         <ul class="tab_list_p3">
-                            <li title="Features">
+                            <li title="Features" class="product">
+                                <div id="slider-tab1" class="slider1"></div>
                                 <label for="tab1" role="button">
                                     <br>
-                                    <span>Baaz</span>
+                                    <!-- <div class="sidebar">|</div> -->
+                                <span>BAAZ</span>
                                 </label>
                             </li>
-                            <li title="Delivery Contents">
+                            <li title="Delivery Contents" class="product">
+                                <div id="slider-tab2"></div>
                                 <label for="tab2" role="button">
                                     <br>
-                                    <span>Battery</span>
+                                    <span>BATTERY</span>
                                 </label>
                             </li>
-                            <li title="Shipping">
+                            <li title="Shipping" class="product">
+                                <div id="slider-tab3"></div>
                                 <label for="tab3" role="button">
                                     <br>
-                                    <span>Swap</span>
+                                    <span>SWAP</span>
                                 </label>
                             </li>
                         </ul>
-                        <div class="slider">
-                            <div class="indicator"></div>
-                        </div>
                         <div class="content">
                             <section>
-                                <div class="video1_p3"></div>
+                                <div class="video_p3" onclick="snap" >
+                                    <video id="vid1" preload="auto" autoplay="autoplay" muted >
+                                        <source  src="./Assets/Scooter.mp4" type="video/mp4"></source>
+                                    </video>
+                                </div>
                             </section>
                             <section>
-                                <div class="video2_p3"></div>
-
+                                <div class="video_p3">
+                                    <video id="vid2" src="./Assets/Battery.mp4" preload="auto" autoplay="autoplay" muted></video>
+                                </div>
+                                
                             </section>
                             <section>
-                                <div class="video3_p3"></div>
+                                <div class="video_p3">
+                                    <video id="vid3" src="./Assets/BaazSwap.mp4" preload="auto" autoplay="autoplay" muted></video>
+                                </div>
                             </section>
                         </div>
 
                     </div>
                 </div>
-                <div id="ContainerPage5" class="page">
+                <div id="ContainerPage5" class="page scrollContainerpage">
                     <div id="viewport">
 
                         <section class="how-we-work with-padding">
-                            <h2 class="chapter">
-                                <span>004 -</span> How We Work
-                            </h2>
-                            <div class="fixed-nav">
-                                <ul>
-                                    <li class="is-active"><a href="#stage1">Amet Consectetur </a></li>
-                                    <li><a href="#stage2">Eum Similique</a></li>
-                                    <li><a href="#stage3">Cupiditate Vel</a></li>
-                                    <li><a href="#stage4">Dignissimos Sed</a></li>
-                                </ul>
-                            </div>
-                            <div id="stage1" class="stage with-parallax" data-color="#8c8480">
-                                <div class="stage__image">
-                                    <img src="./img/img_landscape-01-large.jpg" />
+                            <div class="highlight-corner">
+
+                                <h2 class="chapter">
+                                    <span>Baaz</span> Team And Journey
+                                </h2>
+                                <div class="fixed-nav">
+                                    <ul>
+                                        <li class="is-active"><a href="#stage1">AFR Formula Student </a></li>
+                                        <li><a href="#stage2">Baaz 1.0 Development</a></li>
+                                        <li><a href="#stage3">Baaz 1.0 Deployment</a></li>
+                                        <li><a href="#stage4">Product for Delivery</a></li>
+                                        <li><a href="#stage5">Pre Series A Fundraise</a></li>
+                                        <li><a href="#stage6">Next Gen Baaz Eco System</a></li>
+                                        <li><a href="#stage7">Setting Up of Production Facility</a></li>
+                                        <li><a href="#stage8">Complete Coverage of Delhi with Baaz</a></li>
+                                        <li><a href="#stage9">Going to Impact 1 Million Gig Delivery Workers</a></li>
+                                    </ul>
                                 </div>
-                                <div class="stage__heading">
-                                    <p>01</p>
-                                    <h3>Amet Consectetur</h3>
+                                <div id="stage1" class="stage with-parallax" >
+                                    <div class="stage__image">
+                                        <img src="./img/img_landscape-01-large.jpg" />
+                                        <img src="./img/img_landscape-01-large.jpg" />
+                                    </div>
+                                    <div class="stage__heading">
+                                        <p>2018</p>
+                                        <h3>AFR Formula Student</h3>
+                                    </div>
+                                    <div class="stage__text">
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, vel. Vel
+                                            qui ipsum eum similique reiciendis dicta dignissimos sed ipsa.</p>
+                                    </div>
                                 </div>
-                                <div class="stage__text">
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, vel. Vel
-                                        qui ipsum eum similique reiciendis dicta dignissimos sed ipsa.</p>
+                                <div id="stage2" class="stage with-parallax" data-color="#505156">
+                                    <div class="stage__image">
+                                        <img src="./img/img_landscape-02-large.jpg" />
+                                    </div>
+                                    <div class="stage__heading">
+                                        <p>2019</p>
+                                        <h3>Baaz 1.0 Development</h3>
+                                    </div>
+                                    <div class="stage__text">
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, vel. Vel
+                                            qui ipsum eum similique reiciendis dicta dignissimos sed ipsa.</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div id="stage2" class="stage with-parallax" data-color="#505156">
-                                <div class="stage__image">
-                                    <img src="./img/img_landscape-02-large.jpg" />
+                                <div id="stage3" class="stage with-parallax" data-color="#717872">
+                                    <div class="stage__image">
+                                        <img src="./img/img_landscape-01-large.jpg" />
+                                    </div>
+                                    <div class="stage__heading">
+                                        <p>2020</p>
+                                        <h3>Baaz 1.0 Deployment</h3>
+                                    </div>
+                                    <div class="stage__text">
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, vel. Vel
+                                            qui ipsum eum similique reiciendis dicta dignissimos sed ipsa.</p>
+                                    </div>
                                 </div>
-                                <div class="stage__heading">
-                                    <p>02</p>
-                                    <h3>Eum Similique</h3>
+                                <div id="stage4" class="stage with-parallax" data-color="#ccb28b">
+                                    <div class="stage__image">
+                                        <img src="./img/img_landscape-02-large.jpg" />
+                                    </div>
+                                    <div class="stage__heading">
+                                        <p>2021</p>
+                                        <h3>Product for Delivery</h3>
+                                    </div>
+                                    <div class="stage__text">
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, vel. Vel
+                                            qui ipsum eum similique reiciendis dicta dignissimos sed ipsa.</p>
+                                    </div>
                                 </div>
-                                <div class="stage__text">
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, vel. Vel
-                                        qui ipsum eum similique reiciendis dicta dignissimos sed ipsa.</p>
+                                <div id="stage5" class="stage with-parallax" data-color="#ccb28b">
+                                    <div class="stage__image">
+                                        <img src="./img/img_landscape-02-large.jpg" />
+                                    </div>
+                                    <div class="stage__heading">
+                                        <p>2022</p>
+                                        <h3>Pre Series A Fundraise</h3>
+                                    </div>
+                                    <div class="stage__text">
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, vel. Vel
+                                            qui ipsum eum similique reiciendis dicta dignissimos sed ipsa.</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div id="stage3" class="stage with-parallax" data-color="#717872">
-                                <div class="stage__image">
-                                    <img src="./img/img_landscape-01-large.jpg" />
+                                <div id="stage6" class="stage with-parallax" data-color="#ccb28b">
+                                    <div class="stage__image">
+                                        <img src="./img/img_landscape-02-large.jpg" />
+                                    </div>
+                                    <div class="stage__heading">
+                                        <p>2022</p>
+                                        <h3>Next Gen Baaz Eco System</h3>
+                                    </div>
+                                    <div class="stage__text">
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, vel. Vel
+                                            qui ipsum eum similique reiciendis dicta dignissimos sed ipsa.</p>
+                                    </div>
                                 </div>
-                                <div class="stage__heading">
-                                    <p>03</p>
-                                    <h3>Cupiditate Vel</h3>
+                                <div id="stage7" class="stage with-parallax" data-color="#ccb28b">
+                                    <div class="stage__image">
+                                        <img src="./img/img_landscape-02-large.jpg" />
+                                    </div>
+                                    <div class="stage__heading">
+                                        <p>2022</p>
+                                        <h3>Setting Up of Production Facility</h3>
+                                    </div>
+                                    <div class="stage__text">
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, vel. Vel
+                                            qui ipsum eum similique reiciendis dicta dignissimos sed ipsa.</p>
+                                    </div>
                                 </div>
-                                <div class="stage__text">
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, vel. Vel
-                                        qui ipsum eum similique reiciendis dicta dignissimos sed ipsa.</p>
+                                <div id="stage8" class="stage with-parallax" data-color="#ccb28b">
+                                    <div class="stage__image">
+                                        <img src="./img/img_landscape-02-large.jpg" />
+                                    </div>
+                                    <div class="stage__heading">
+                                        <p>2023</p>
+                                        <h3>Complete Coverage of Delhi with Baaz</h3>
+                                    </div>
+                                    <div class="stage__text">
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, vel. Vel
+                                            qui ipsum eum similique reiciendis dicta dignissimos sed ipsa.</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div id="stage4" class="stage with-parallax" data-color="#ccb28b">
-                                <div class="stage__image">
-                                    <img src="./img/img_landscape-02-large.jpg" />
-                                </div>
-                                <div class="stage__heading">
-                                    <p>04</p>
-                                    <h3>Dignissimos Sed</h3>
-                                </div>
-                                <div class="stage__text">
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, vel. Vel
-                                        qui ipsum eum similique reiciendis dicta dignissimos sed ipsa.</p>
+                                <div id="stage9" class="stage with-parallax" data-color="#ccb28b">
+                                    <div class="stage__image">
+                                        <img src="./img/img_landscape-02-large.jpg" />
+                                    </div>
+                                    <div class="stage__heading">
+                                        <p>2025</p>
+                                        <h3>Going to Impact 1 Million Gig Delivery Workers</h3>
+                                    </div>
+                                    <div class="stage__text">
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, vel. Vel
+                                            qui ipsum eum similique reiciendis dicta dignissimos sed ipsa.</p>
+                                    </div>
                                 </div>
                             </div>
                         </section>
                     </div>
                 </div>
-                <div id="ContainerPage4" class="page">
+                <div id="ContainerPage4" class="page scrollContainerpage">
                     <section id="slider" class="pt-5">
                         <div class="container">
                             <div class="slider-heading">
@@ -170,11 +270,16 @@
                             <div class="slider">
                                 <div class="owl-carousel">
                                     <div class="slider-card">
-                                        <div class="d-flex justify-content-center align-items-center mb-4">
-                                            <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2022-02/22/full/1645532647-6068.jpg?im=Resize,width=640%27);"
+                                        <div class="d-flex  justify-content-center align-items-center mb-5">
+                                            <a href="http://google.com">
+                                                <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2022-02/22/full/1645532647-6068.jpg?im=Resize,width=640%27);"
                                                 alt="">
+                                            </a>
                                         </div>
-                                        <h5 class="mb-0 text-center"><b>HTML CSS3 Tutorials</b></h5>
+                                        <h5 class="mb-0 text-center link article"><b>
+                                            
+                                                HTML CSS3 Tutorials
+                                        </b></h5>
                                         <p class="text-center p-4">Lorem ipsum dolor sit amet, consectetur adipisicing
                                             elit. Ipsam
                                             temporibus quidem magni qui doloribus quasi natus inventore nisi velit
@@ -182,8 +287,10 @@
                                     </div>
                                     <div class="slider-card">
                                         <div class="d-flex justify-content-center align-items-center mb-4">
-                                            <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2022-02/22/full/1645532647-6068.jpg?im=Resize,width=640%27);"
+                                            <a href="http://google.com">
+                                                <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2022-02/22/full/1645532647-6068.jpg?im=Resize,width=640%27);"
                                                 alt="">
+                                            </a>
                                         </div>
                                         <h5 class="mb-0 text-center"><b>Wordpress Tutorials</b></h5>
                                         <p class="text-center p-4">Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -193,8 +300,10 @@
                                     </div>
                                     <div class="slider-card">
                                         <div class="d-flex justify-content-center align-items-center mb-4">
-                                            <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2022-02/22/full/1645532647-6068.jpg?im=Resize,width=640%27);"
+                                            <a href="http://google.com">
+                                                <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2022-02/22/full/1645532647-6068.jpg?im=Resize,width=640%27);"
                                                 alt="">
+                                            </a>
                                         </div>
                                         <h5 class="mb-0 text-center"><b>PHP MySQL Tutorials</b></h5>
                                         <p class="text-center p-4">Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -204,8 +313,10 @@
                                     </div>
                                     <div class="slider-card">
                                         <div class="d-flex justify-content-center align-items-center mb-4">
-                                            <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2022-02/22/full/1645532647-6068.jpg?im=Resize,width=640%27);"
+                                            <a href="http://google.com">
+                                                <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2022-02/22/full/1645532647-6068.jpg?im=Resize,width=640%27);"
                                                 alt="">
+                                            </a>
                                         </div>
                                         <h5 class="mb-0 text-center"><b>Javascript Tutorials</b></h5>
                                         <p class="text-center p-4">Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -215,8 +326,10 @@
                                     </div>
                                     <div class="slider-card">
                                         <div class="d-flex justify-content-center align-items-center mb-4">
-                                            <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2022-02/22/full/1645532647-6068.jpg?im=Resize,width=640%27);"
+                                            <a href="http://google.com">
+                                                <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2022-02/22/full/1645532647-6068.jpg?im=Resize,width=640%27);"
                                                 alt="">
+                                            </a>
                                         </div>
                                         <h5 class="mb-0 text-center"><b>Bootstrap Tutorials</b></h5>
                                         <p class="text-center p-4">Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -229,7 +342,7 @@
                         </div>
                     </section>
                 </div>
-                <div id="ContainerPage6" class="page">
+                <div id="ContainerPage6" class="page scrollContainerpage">
                     <section class="section section-impact active" data-component-list="ImpactController"
                         style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none;">
                         <input type="radio" name="impact-toggle" id="impact-toggle-distance" class="impact-toggle">
@@ -281,7 +394,6 @@
             </section>
         </div>
     </div>
-
     <script
     src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"
     integrity="sha256-2p2tRZlPowp3P/04Pw2rqVCSbhyV/IB7ZEVUglrDS/c="
@@ -307,14 +419,22 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script>
 	<script src="Assets/owl.carousel.min.js"></script>
 
+
+    <script>
+
+        
+    </script>
+
     <script src="https://unpkg.com/@barba/core"></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/smooth-scrollbar@latest/dist/smooth-scrollbar.js"></script>
-    <script src="script.js"></script>
-    <script src="page6.js"></script>
+    <!-- <script src="page6.js"></script> -->
     <script src="js/main.js"></script>
+    <script src="script.js"></script>
+    <script>
+    </script>
 </body>
 
 </html>

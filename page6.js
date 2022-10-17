@@ -379,7 +379,7 @@
                                 }
                             }]), e
                         }();
-                    n(A, "API_ENDPOINT", "https://cdn.gogoro.com/data/environmental-impact-v3.json"),
+                    n(A, "API_ENDPOINT", "./Assets/nums.json"),
                     n(A, "instance", void 0);
                     var k = function() {
                         function e(r, n) {
@@ -20663,7 +20663,7 @@
                             className: Y
                         }), J && (!1 === Q || Q === la || (Q = !(!Q && "flex" === pa(J.parentNode).display) && ha), wt.pin = J, !1 !== e.force3D && es.set(J, {
                             force3D: !0
-                        }), (i = es.core.getCache(J)).spacer ? g = i.pinState : (ot && ((ot = Xi(ot)) && !ot.nodeType && (ot = ot.current || ot.nativeElement), i.spacerIsNative = !!ot, ot && (i.spacerState = to(ot))), i.spacer = _ = ot || is.createElement("div"), _.classList.add("pin-spacer"), X && _.classList.add("pin-spacer-" + X), i.pinState = g = to(J)), wt.spacer = _ = i.spacer, C = pa(J), S = C[Q + ct.os2], w = es.getProperty(J), x = es.quickSetter(J, ct.a, ca), Za(J, _, C), v = to(J)), _t) {
+                        }), (i = es.core.getCache(J)).spacer ? g = i.pinState : (ot && ((ot = Xi(ot)) && !ot.nodeType && (ot = ot.current || ot.nativeElement), i.spacerIsNative = !!ot, ot && (i.spacerState = to(ot))), i.spacer = _ = ot || is.createElement("div"), _.classList.add("pin-spacerd"), X && _.classList.add("pin-spacer-" + X), i.pinState = g = to(J)), wt.spacer = _ = i.spacer, C = pa(J), S = C[Q + ct.os2], w = es.getProperty(J), x = es.quickSetter(J, ct.a, ca), Za(J, _, C), v = to(J)), _t) {
                             d = Js(_t) ? fa(_t, xa) : xa,
                             p = Ta("scroller-start", X, ft, ct, d, 0),
                             f = Ta("scroller-end", X, ft, ct, d, 0, p),

@@ -1,5 +1,12 @@
+
 // Owlcarousel
 $(document).ready(function () {
+    
+    console.log("Hello Friend");
+    
+    const line = document.querySelector(".newDev");
+    line.innerHTML="Baaz Bikes"
+
     $(".owl-carousel").owlCarousel({
         loop: true,
         margin: 10,
@@ -25,6 +32,8 @@ $(document).ready(function () {
         }
     });
 });
+
+// console.log("Hisdf");
 
 const intro = document.querySelector(".intro");
 const video = intro.querySelector("video");
@@ -64,72 +73,49 @@ let delay = 0;
 
 scene.on("update", e => {
   scrollpos = e.scrollPos / 1000;
+  var vids = document.getElementById("vid1");
+//   console.log(vids);
+//   await vids.play();
 });
 
 setInterval(() => {
   delay += (scrollpos - delay) * accelamount;
-  console.log(scrollpos, delay);
-
   video.currentTime = delay;
-}, 33.3);
+}, 50);
+
+var logo = document.getElementById("logo_p1");
+logo.addEventListener('click', ()=>{
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+})
 
 
-const galleryContainer = document.querySelector('.gallery-container');
-const galleryControlsContainer = document.querySelector('.gallery-controls');
-const galleryControls = ['previous', 'next'];
-const galleryItems = document.querySelectorAll('.gallery-item');
-class Carousel {
+function changeClass(task, tab){
+  var element = document.getElementById("slider-"+tab);
+  if(task == "add"){
+      element.classList.add("slider1");
+  }
+  else{
+      element.classList.remove("slider1");
+  }
+}
 
-    constructor(container, items, controls) {
-        this.carouselContainer = container;
-        this.carouselControls = controls;
-        this.carouselArray = [...items];
-    }
+function changeTo(event){
+  var current = event.target.id;
+  console.log(current);
+  tabArray = ["tab1", "tab2", "tab3"];
 
-    updateGallery() {
-        this.carouselArray.forEach(el => {
-            el.classList.remove('gallery-item-1');
-            el.classList.remove('gallery-item-2');
-            el.classList.remove('gallery-item-3');
-            el.classList.remove('gallery-item-4');
-            el.classList.remove('gallery-item-5');
-            el.classList.remove('gallery-item-6');
-            el.classList.remove('gallery-item-7');
-        });
-
-        this.carouselArray.slice(0, 7).forEach((el,i) => {
-            el.classList.add(`gallery-item-${i+1}`);
-        });
-    }
-    setCurrentState(direction) {
-        if (direction.className == "gallery-controls-previous") {
-            this.carouselArray.unshift(this.carouselArray.pop());
-        } else {
-            this.carouselArray.push(this.carouselArray.shift());
-        }
-        this.updateGallery();
-    }
-
-    setControls(){
-        this.carouselControls.forEach(control=>{
-            galleryControlsContainer.appendChild(document.createElement('button')).className = `gallery-controls-${control}`;
-            document.querySelector(`.gallery-controls-${control}`).innerHTML = control;
-        });
-    }
-
-    useControls(){
-        const triggers = [...galleryControlsContainer.childNodes];
-        triggers.forEach(control=>{
-            control.addEventListener('click', e=>{
-                e.preventDefault();
-                this.setCurrentState(control);
-            })
-        })
-
-    }
+  tabArray.forEach(tab=>{
+      if(tab==current){
+          changeClass("add",tab);
+      }
+      else{
+          changeClass("remove",tab);
+      }
+  })
 
 }
 
-const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
-exampleCarousel.setControls();
-exampleCarousel.useControls();
+document.querySelectorAll("input[name='tab-control']").forEach((input) => {
+  input.addEventListener('change', changeTo);
+});
