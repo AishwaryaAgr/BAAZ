@@ -78,10 +78,37 @@ scene.on("update", e => {
 //   await vids.play();
 });
 
-setInterval(() => {
+setInterval(()=>{
   delay += (scrollpos - delay) * accelamount;
   video.currentTime = delay;
-}, 50);
+},50)
+
+setInterval(() => {
+  var page5 = document.getElementById("ContainerPage5");
+  var finder = document.getElementById("finder");
+  var pos = page5.getBoundingClientRect();
+  var topPos = 0;
+  finder.style.top = "20vh"
+  if(pos.top <= 0){
+    finder.style.position = "fixed";
+    finder.style.left = "16.8vw";
+    if(pos.bottom < 720){
+      topPos= pos.bottom - 600;
+      finder.style.top = topPos;
+    }
+    if(pos.bottom <=400){
+      finder.style.position = "absolute";
+      finder.style.left = "6.8vw";
+    }
+
+  }
+  else{
+    finder.style.position = "absolute";
+    finder.style.left = "6.8vw";
+  }
+
+  console.log(pos.bottom);
+}, 30);
 
 var logo = document.getElementById("logo_p1");
 logo.addEventListener('click', ()=>{
